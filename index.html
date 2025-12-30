@@ -13,26 +13,63 @@
 </head>
 <body>
 
+
+  <!-- HEADER / NAVBAR -->
+<header class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="logo">
+      <img src="Dragon.png" alt="DRAGON Logo">
+      DRAGON
+    </a>
+
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#how-to-buy">Token</a>
+    </nav>
+
+    <div class="lang-switcher">
+      <button id="idBtn">ID</button>
+      <button id="enBtn">EN</button>
+    </div>
+
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      ☰
+    </button>
+  </div>
+</header>
+
+
+
+
+
   <!-- HERO -->
-<section class="hero">
+<section id="hero" class="hero">
   <div class="hero-inner">
     
     <!-- KIRI (TEXT + BUTTON + CONTRACT ADDRESS) -->
     <div class="hero-content">
-      <h1>DRAGON</h1>
-      <p>Build Strong. Grow Together. Dominate the Future.</p>
+      <h1 data-lang-id="DRAGON" data-lang-en="DRAGON">DRAGON</h1>
+      <p data-lang-id="Bangun Kuat. Tumbuh Bersama. Dominasi Masa Depan." 
+        data-lang-en="Build Strong. Grow Together. Dominate the Future.">
+        Build Strong. Grow Together. Dominate the Future.
+      </p>
     
       <!-- BUY TOKEN BUTTON -->
       <div class="btn-group">
-        <a href="#how-to-buy" class="btn primary">🔥 Buy Token ⬇️</a>
+       <a href="#how-to-buy" class="btn primary" 
+          data-lang-id="🔥 Beli Token ⬇️" 
+          data-lang-en="🔥 Buy Token ⬇️">
+                    🔥 Buy Token ⬇️
+</a>
       </div>
 
 
       <!-- CONTRACT ADDRESS -->
-      <div class="ca-section">
+      <div id="hero" class="ca-section">
         <span class="ca-label">Contract Address</span>
         <div class="ca-box" onclick="copyCA()">
-          DJRg1j3S2d73Dk9uedG6gsuh7rdGkRkdeg5APCVrpump
+          HDXJehaWuZckkcBHvh5VaKZPSrCGNs8oFawrz8HzjBAb
         </div>
       </div>
     </div>
@@ -56,104 +93,162 @@ function copyCA(){
 
 
   <!-- ABOUT -->
-  <section class="about">
+  <section id="about" class="about">
   <div class="about-text">
 
-    <h2>About DRAGON</h2>
-    <p>
+    <h2 data-lang-id="Tentang DRAGON" data-lang-en="About DRAGON">About DRAGON</h2>
+    <p data-lang-id="DRAGON adalah proyek blockchain berbasis komunitas yang dirancang untuk membangun ekosistem yang kuat dengan prinsip fair launch, utilitas jangka panjang, dan pertumbuhan yang berkelanjutan."
+       data-lang-en="DRAGON is a community-based blockchain project designed to build a strong ecosystem with principles of fair launch, long-term utility, and sustainable growth.">
       DRAGON adalah proyek blockchain berbasis komunitas yang dirancang untuk membangun
       ekosistem yang kuat dengan prinsip fair launch, utilitas jangka panjang, dan
       pertumbuhan yang berkelanjutan.
     </p>
-    <p>
+    <p data-lang-id="Terinspirasi dari filosofi naga—kekuatan, ketahanan, dan dominasi—DRAGON bertujuan menciptakan nilai nyata melalui staking, NFT, dan ekspansi global yang strategis."
+       data-lang-en="Inspired by the philosophy of dragons—strength, resilience, and dominance—DRAGON aims to create real value through staking, NFTs, and strategic global expansion.">
       Terinspirasi dari filosofi naga—kekuatan, ketahanan, dan dominasi—DRAGON bertujuan
       menciptakan nilai nyata melalui staking, NFT, dan ekspansi global yang strategis.
     </p>
 
-    <h2>Vision</h2>
-    <p>
+    <h2 data-lang-id="Visi" data-lang-en="Vision">Vision</h2>
+    <p data-lang-id="Menjadi ekosistem blockchain yang diakui secara global dengan kepemilikan komunitas yang kuat, utilitas nyata, dan pertumbuhan pasar yang berkelanjutan."
+       data-lang-en="To become a globally recognized blockchain ecosystem with strong community ownership, real utility, and sustainable market growth.">
       Menjadi ekosistem blockchain yang diakui secara global dengan kepemilikan komunitas
       yang kuat, utilitas nyata, dan pertumbuhan pasar yang berkelanjutan.
     </p>
 
-    <h2>Mission</h2>
+    <h2 data-lang-id="Misi" data-lang-en="Mission">Mission</h2>
     <ul class="mission-list">
-      <li>Membangun proyek kripto yang transparan dan adil</li>
-      <li>Memberdayakan komunitas melalui partisipasi terdesentralisasi</li>
-      <li>Menyediakan nilai jangka panjang melalui produk berbasis utilitas</li>
-      <li>Melakukan ekspansi global dengan kemitraan strategis</li>
+      <li data-lang-id="Membangun proyek kripto yang transparan dan adil" data-lang-en="Build a transparent and fair crypto project">Membangun proyek kripto yang transparan dan adil</li>
+      <li data-lang-id="Memberdayakan komunitas melalui partisipasi terdesentralisasi" data-lang-en="Empower the community through decentralized participation">Memberdayakan komunitas melalui partisipasi terdesentralisasi</li>
+      <li data-lang-id="Menyediakan nilai jangka panjang melalui produk berbasis utilitas" data-lang-en="Provide long-term value through utility-based products">Menyediakan nilai jangka panjang melalui produk berbasis utilitas</li>
+      <li data-lang-id="Melakukan ekspansi global dengan kemitraan strategis" data-lang-en="Execute global expansion through strategic partnerships">Melakukan ekspansi global dengan kemitraan strategis</li>
     </ul>
 
-  </div>
+  </div> <!-- tutup about-text -->
 
   <div class="about-image">
     <img src="CoinDragon1.png" alt="Dragon Image">
   </div>
 </section>
 
+
+
  <!-- TRUST -->
   <section class="trust">
   <div class="trust-card">
     <span class="trust-icon">🔍</span>
-    <h3>Transparansi</h3>
-    <p>Komunikasi terbuka dan smart contract yang dapat diverifikasi.</p>
+    <h3 data-lang-id="Transparansi" data-lang-en="Transparency">Transparansi</h3>
+    <p data-lang-id="Komunikasi terbuka dan smart contract yang dapat diverifikasi."
+       data-lang-en="Open communication and verifiable smart contracts.">
+      Komunikasi terbuka dan smart contract yang dapat diverifikasi.
+    </p>
   </div>
 
   <div class="trust-card">
     <span class="trust-icon">👥</span>
-    <h3>Komunitas Utama</h3>
-    <p>Holder adalah fondasi utama dan penggerak ekosistem DRAGON.</p>
+    <h3 data-lang-id="Komunitas Utama" data-lang-en="Community Focus">Komunitas Utama</h3>
+    <p data-lang-id="Holder adalah fondasi utama dan penggerak ekosistem DRAGON."
+       data-lang-en="Holders are the main foundation and drivers of the DRAGON ecosystem.">
+      Holder adalah fondasi utama dan penggerak ekosistem DRAGON.
+    </p>
   </div>
 
   <div class="trust-card">
     <span class="trust-icon">🛡</span>
-    <h3>Keamanan</h3>
-    <p>Smart contract yang aman serta manajemen risiko berlapis.</p>
+    <h3 data-lang-id="Keamanan" data-lang-en="Security">Keamanan</h3>
+    <p data-lang-id="Smart contract yang aman serta manajemen risiko berlapis."
+       data-lang-en="Secure smart contracts with layered risk management.">
+      Smart contract yang aman serta manajemen risiko berlapis.
+    </p>
   </div>
 
   <div class="trust-card">
     <span class="trust-icon">♻️</span>
-    <h3>Keberlanjutan</h3>
-    <p>Fokus pada pertumbuhan jangka panjang, bukan sekadar hype.</p>
+    <h3 data-lang-id="Keberlanjutan" data-lang-en="Sustainability">Keberlanjutan</h3>
+    <p data-lang-id="Fokus pada pertumbuhan jangka panjang, bukan sekadar hype."
+       data-lang-en="Focus on long-term growth, not just hype.">
+      Fokus pada pertumbuhan jangka panjang, bukan sekadar hype.
+    </p>
   </div>
 </section>
 
 
+    <!-- use case -->
  <section class="token-overview">
-  <h2>Use Case</h2>
-  <p class="token-subtitle">
+  <h2 data-lang-id="Gambaran Use Case" data-lang-en="Use Case">Use Case</h2>
+  <p class="token-subtitle"
+     data-lang-id="Gambaran umum token DRAGON dan utilitas utama dalam ekosistem."
+     data-lang-en="Overview of DRAGON token and its main utilities in the ecosystem.">
     Gambaran umum token DRAGON dan utilitas utama dalam ekosistem.
   </p>
 
   <div class="token-grid">
-
-    <!-- Token Info -->
     <div class="token-info">
       <div class="info-row">
-        <span>Token Name</span>
+        <span data-lang-id="Nama Token" data-lang-en="Token Name">Token Name</span>
         <strong>DRAGON</strong>
       </div>
       <div class="info-row">
-        <span>Token Type</span>
+        <span data-lang-id="Tipe Token" data-lang-en="Token Type">Token Type</span>
         <strong>Smart Contract Token</strong>
       </div>
       <div class="info-row">
-        <span>Launch Method</span>
+        <span data-lang-id="Metode Peluncuran" data-lang-en="Launch Method">Launch Method</span>
         <strong>Fair Launch</strong>
       </div>
       <div class="info-row">
-        <span>Main Utility</span>
+        <span data-lang-id="Utilitas Utama" data-lang-en="Main Utility">Main Utility</span>
         <strong>Staking, NFT, Governance</strong>
       </div>
-      
     </div>
 
-    <script>
-function showPhase(phase){
-  const content = document.getElementById("roadmapContent");
+    <div class="usecase-container">
+      <div class="usecase-card">
+        <div class="usecase-icon">📈</div>
+        <h3 data-lang-id="Staking" data-lang-en="Staking">Staking</h3>
+        <p data-lang-id="Holder DRAGON dapat melakukan staking untuk memperoleh reward, mendorong holding jangka panjang, dan menjaga stabilitas ekosistem."
+           data-lang-en="DRAGON holders can stake to earn rewards, encourage long-term holding, and maintain ecosystem stability.">
+          Holder DRAGON dapat melakukan staking untuk memperoleh reward,
+          mendorong holding jangka panjang, dan menjaga stabilitas ekosistem.
+        </p>
+      </div>
 
-  const phases = {
-    1: `
+      <div class="usecase-card">
+        <div class="usecase-icon">🎨</div>
+        <h3 data-lang-id="Ekosistem NFT" data-lang-en="NFT Ecosystem">Ekosistem NFT</h3>
+        <p data-lang-id="Koleksi NFT DRAGON memberikan utilitas tambahan seperti akses eksklusif, peningkatan reward staking, dan fitur khusus dalam ekosistem."
+           data-lang-en="DRAGON NFT collection provides additional utilities such as exclusive access, enhanced staking rewards, and special ecosystem features.">
+          Koleksi NFT DRAGON memberikan utilitas tambahan seperti akses eksklusif,
+          peningkatan reward staking, dan fitur khusus dalam ekosistem.
+        </p>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-icon">🗳</div>
+        <h3 data-lang-id="Komunitas & Governance" data-lang-en="Community & Governance">Komunitas & Governance</h3>
+        <p data-lang-id="Pada tahap lanjutan, holder akan memiliki hak partisipasi dalam pengambilan keputusan melalui sistem governance terdesentralisasi."
+           data-lang-en="At later stages, holders will have participatory rights in decision-making via a decentralized governance system.">
+          Pada tahap lanjutan, holder akan memiliki hak partisipasi dalam
+          pengambilan keputusan melalui sistem governance terdesentralisasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+const phases = {
+  1: {
+    id: `
+      <h3>🔥 Fase 1 — Genesis</h3>
+      <ul>
+        <li>Fair Launch</li>
+        <li>Komunitas Kuat</li>
+        <li>Investor Private</li>
+        <li>Guerrilla Marketing</li>
+        <li>500+ Holder</li>
+      </ul>
+    `,
+    en: `
       <h3>🔥 Phase 1 — Genesis</h3>
       <ul>
         <li>Fair Launch</li>
@@ -162,25 +257,56 @@ function showPhase(phase){
         <li>Guerrilla Marketing</li>
         <li>500+ Holders</li>
       </ul>
+    `
+  },
+  2: {
+    id: `
+      <h3>🚀 Fase 2 — Pertumbuhan</h3>
+      <ul>
+        <li>1,000+ Holder</li>
+        <li>Listing CoinGecko</li>
+        <li>Listing CoinMarketCap</li>
+        <li>KOL Global</li>
+      </ul>
     `,
-    2: `
+    en: `
       <h3>🚀 Phase 2 — Growth</h3>
       <ul>
         <li>1,000+ Holders</li>
         <li>CoinGecko Listing</li>
-        <li>CoinMarketCap</li>
+        <li>CoinMarketCap Listing</li>
         <li>Global KOL</li>
       </ul>
+    `
+  },
+  3: {
+    id: `
+      <h3>⚙️ Fase 3 — Utilitas</h3>
+      <ul>
+        <li>Staking dApp (Beta)</li>
+        <li>Pembaruan Smart Contract</li>
+        <li>Koleksi NFT</li>
+      </ul>
     `,
-    3: `
+    en: `
       <h3>⚙️ Phase 3 — Utility</h3>
       <ul>
         <li>Staking dApp (Beta)</li>
         <li>Smart Contract Upgrade</li>
         <li>NFT Collection</li>
       </ul>
+    `
+  },
+  4: {
+    id: `
+      <h3>👑 Fase 4 — Dominasi</h3>
+      <ul>
+        <li>Listing CEX Tier-1</li>
+        <li>Ekspansi Asia</li>
+        <li>Market Cap $100M+</li>
+      </ul>
     `,
-    4: `
+    en: `
       <h3>👑 Phase 4 — Dominance</h3>
       <ul>
         <li>Tier-1 CEX Listing</li>
@@ -188,118 +314,145 @@ function showPhase(phase){
         <li>$100M+ Market Cap</li>
       </ul>
     `
-  };
+  }
+};
 
-  content.innerHTML = phases[phase];
+let currentLang = 'en'; // default bahasa
+
+function switchLanguage(lang){
+  currentLang = lang;
+  // update konten roadmap sesuai fase yang terakhir ditampilkan
+  const content = document.getElementById("roadmapContent");
+  const phaseNumber = content.dataset.currentPhase || 0;
+  if(phaseNumber) content.innerHTML = phases[phaseNumber][currentLang];
 }
+
+// fungsi untuk menampilkan fase
+function showPhase(phase){
+  const content = document.getElementById("roadmapContent");
+  content.innerHTML = phases[phase][currentLang];
+  content.dataset.currentPhase = phase; // simpan fase saat ini
+}
+
+// contoh tombol bahasa
+document.getElementById("idBtn").addEventListener("click", ()=>switchLanguage("id"));
+document.getElementById("enBtn").addEventListener("click", ()=>switchLanguage("en"));
 </script>
 
-  <div class="usecase-container">
 
-    <!-- STAKING -->
-    <div class="usecase-card">
-      <div class="usecase-icon">🪙</div>
-      <h3>Staking</h3>
-      <p>
-        Holder DRAGON dapat melakukan staking untuk memperoleh reward,
-        mendorong holding jangka panjang, dan menjaga stabilitas ekosistem.
-      </p>
-    </div>
-
-    <!-- NFT -->
-    <div class="usecase-card">
-      <div class="usecase-icon">🎨</div>
-      <h3>Ekosistem NFT</h3>
-      <p>
-        Koleksi NFT DRAGON memberikan utilitas tambahan seperti akses eksklusif,
-        peningkatan reward staking, dan fitur khusus dalam ekosistem.
-      </p>
-    </div>
-
-    <!-- GOVERNANCE -->
-    <div class="usecase-card">
-      <div class="usecase-icon">🗳</div>
-      <h3>Komunitas & Governance</h3>
-      <p>
-        Pada tahap lanjutan, holder akan memiliki hak partisipasi dalam
-        pengambilan keputusan melalui sistem governance terdesentralisasi.
-      </p>
-    </div>
-
-  </div>
-</section>
-
- <!--- Roadmap -->
-  <section class="dragon-circle-roadmap">
-  <h2>DRAGON ROADMAP</h2>
-  <p class="subtitle">Click the circle to explore our journey</p>
+<!-- Roadmap -->
+<section class="dragon-circle-roadmap">
+  <h2 data-lang-id="Roadmap DRAGON" data-lang-en="DRAGON ROADMAP">DRAGON ROADMAP</h2>
+  <p class="subtitle" data-lang-id="Klik lingkaran untuk menjelajahi perjalanan kami" data-lang-en="Click the circle to explore our journey">
+    Click the circle to explore our journey
+  </p>
 
   <div class="circle-container">
-
-    <!-- CENTER CONTENT -->
     <div class="center-content" id="roadmapContent">
-      <h4>🐉 DRAGON</h4>
-      <p>Select a phase to view details</p>
+      <h4 data-lang-id="🐉 DRAGON" data-lang-en="🐉 DRAGON">🐉 DRAGON</h4>
+      <p data-lang-id="Pilih fase untuk melihat detail" data-lang-en="Select a phase to view details">
+        Select a phase to view details
+      </p>
     </div>
 
-    <!-- PHASE NODES -->
     <div class="node node1" onclick="showPhase(1)">🔥</div>
     <div class="node node2" onclick="showPhase(2)">🚀</div>
     <div class="node node3" onclick="showPhase(3)">⚙️</div>
     <div class="node node4" onclick="showPhase(4)">👑</div>
-
   </div>
 </section>
+
 
 
   
   <!-- HOW TO BUY -->
 <section id="how-to-buy">
-  <h2>How to Buy</h2>
+  <h2 data-lang-id="Cara Membeli" data-lang-en="How to Buy">How to Buy</h2>
   <div class="steps">
     <a href="#" class="step">
-      <img src="Binance.png" alt="Create Wallet">
+      <img src="Binance.png" 
+           alt="Create Wallet" 
+           data-lang-id-alt="Buat Wallet" 
+           data-lang-en-alt="Create Wallet">
     </a>
     <a href="#" class="step">
-      <img src="MEXC.png" alt="Buy Coin">
+      <img src="MEXC.png" 
+           alt="Buy Coin" 
+           data-lang-id-alt="Beli Koin" 
+           data-lang-en-alt="Buy Coin">
     </a>
     <a href="#" class="step">
-      <img src="Phantom.png" alt="Swap DRAGON">
+      <img src="Phantom.png" 
+           alt="Swap DRAGON" 
+           data-lang-id-alt="Tukar DRAGON" 
+           data-lang-en-alt="Swap DRAGON">
     </a>
     <a href="#" class="step">
-      <img src="Gateio.png" alt="Stake DRAGON">
+      <img src="Gateio.png" 
+           alt="Stake DRAGON" 
+           data-lang-id-alt="Stake DRAGON" 
+           data-lang-en-alt="Stake DRAGON">
     </a>
     <a href="#" class="step">
-      <img src="OKX.png" alt="Stake DRAGON">
+      <img src="OKX.png" 
+           alt="Stake DRAGON" 
+           data-lang-id-alt="Stake DRAGON" 
+           data-lang-en-alt="Stake DRAGON">
     </a>
   </div>
 </section>
 
 
   <!-- COMMUNITY -->
-  <section class="community">
-    <h2>Join The Dragon Community</h2>
-    <p>DRAGON is built by the community, for the community.</p>
-    <div class="socials">
-      <a href="#" class="btn icon-btn">
-        <img src="telegram.png" alt="Telegram">
-          TELEGRAM
-      </a>
+<section class="community">
+  <h2 data-lang-id="Bergabung dengan Komunitas Dragon" data-lang-en="Join The Dragon Community">Join The Dragon Community</h2>
+  <p data-lang-id="DRAGON dibangun oleh komunitas, untuk komunitas." data-lang-en="DRAGON is built by the community, for the community.">
+    DRAGON is built by the community, for the community.
+  </p>
+  <div class="socials">
+    <a href="https://t.me/DRAAGONX" class="btn icon-btn">
+      <img src="telegram.png" alt="Telegram">
+      TELEGRAM
+    </a>
 
-      <a href="#" class="btn icon-btn">
-        <img src="X.png" alt="Twitter">
-         Twitter______
-      </a>
-    </div>
-  </section>
+    <a href="https://x.com/drgnofficial?s=21" class="btn icon-btn">
+      <img src="X.png" alt="Twitter">
+      Twitter
+    </a>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 DRAGON. All Rights Reserved.<br>
-    Cryptocurrency investments carry high risk.
-  </footer>
-  
-  
+<!-- FOOTER -->
+<footer>
+  <span data-lang-id="© 2025 DRAGON. Semua Hak Dilindungi." data-lang-en="© 2025 DRAGON. All Rights Reserved.">© 2025 DRAGON. All Rights Reserved.</span><br>
+  <span data-lang-id="Investasi cryptocurrency membawa risiko tinggi." data-lang-en="Cryptocurrency investments carry high risk.">Cryptocurrency investments carry high risk.</span>
+</footer>
+
+  <script>
+const idBtn = document.getElementById("idBtn");
+const enBtn = document.getElementById("enBtn");
+
+function switchLanguage(lang){
+  const elements = document.querySelectorAll("[data-lang-id]");
+  elements.forEach(el=>{
+    el.textContent = lang === "id" ? el.dataset.langId : el.dataset.langEn;
+  });
+}
+
+idBtn.addEventListener("click", ()=>switchLanguage("id"));
+enBtn.addEventListener("click", ()=>switchLanguage("en"));
+
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const navMenu = document.getElementById("navMenu");
+
+hamburgerBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+</script>
+
+
+
 
 </body>
 </html>

@@ -1,3 +1,132 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  position: fixed; /* ganti sticky jadi fixed agar selalu muncul */
+  top: 0;
+  left: 0;
+  background: rgba(11, 11, 15, 0.95);
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffb700;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffb700;
+}
+
+/* LANGUAGE SWITCHER */
+.lang-switcher {
+  display: flex;
+  gap: 5px;
+}
+
+.lang-switcher button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.lang-switcher button:hover {
+  background: #ffb700;
+  color: #000;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none; /* hidden untuk desktop */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    position: fixed;   /* tetap di atas konten saat dibuka */
+    top: 60px;         /* di bawah navbar */
+    right: 0;
+    background: rgba(11,11,15,0.95);
+    flex-direction: column;
+    width: 200px;
+    display: none;     /* default hidden */
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    z-index: 9999;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .lang-switcher {
+    margin-left: 10px;
+  }
+}
+
+/* toggle class untuk hamburger */
+.nav-links.active {
+  display: flex;
+}
+
+
+
+
 :root {
   --bg: #0b0b0f;
   --card: #15151d;
@@ -71,7 +200,7 @@ a {
 
 /* BUTTON */
 .btn-group{
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* CONTRACT ADDRESS */
@@ -265,10 +394,16 @@ html {
 
 /* ===== ABOUT ===== */
 .about {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
-  align-items: center;
+  display: flex;            
+  justify-content: space-between;
+  align-items: flex-start;  
+  gap: 40px;                
+  padding: 80px 50px;
+}
+
+.about-text {
+  flex: 1;                  
+  text-align: left;          /* rapih di kiri */
 }
 
 .about-text h2 {
@@ -294,21 +429,37 @@ html {
   list-style: disc;
 }
 
-.about-image img {
-  width: 100%;
+.about-image {
+  flex: 1;                  
+  display: flex;
+  justify-content: center;  
+  align-items: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.about-image img {
+  max-width: 100%;
+  width: 600px;   /* ukuran gambar di laptop */
+  height: auto;
+  border-radius: 15px;
+}
+
+/* RESPONSIVE HP */
+@media(max-width: 1024px){
   .about {
-    grid-template-columns: 1fr;
+    flex-direction: column; 
+    gap: 30px;
     text-align: center;
   }
 
-  .mission-list {
-    text-align: left;
+  .about-text, .about-image {
+    flex: unset;            
+  }
+
+  .about-image img {
+    width: 80%;             
   }
 }
+
 
 
 /* ===== UTILITY ===== */
@@ -529,17 +680,42 @@ html {
 .node3{ bottom: -10px; left: 50%; transform: translateX(-50%); }
 .node4{ left: -10px; top: 50%; transform: translateY(-50%); }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 @media(max-width:600px){
   .circle-container{
-    width: 410px;
-    height: 410px;
+    width: 300px;       /* lebih kecil supaya muat layar HP */
+    height: 300px;
   }
 
   .center-content{
-    width: 200px;
+    width: 180px;       /* sesuaikan dengan lingkaran */
+    padding: 20px;
+    font-size: 14px;    /* teks lebih kecil tapi tetap terbaca */
   }
+
+  /* POSISI NODES DI LINGKARAN */
+  .node{
+    width: 60px;        /* lebih kecil supaya tidak tumpang tindih */
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .node1{ top: -5px; left: 50%; transform: translateX(-50%); }
+  .node2{ right: -5px; top: 50%; transform: translateY(-50%); }
+  .node3{ bottom: -5px; left: 50%; transform: translateX(-50%); }
+  .node4{ left: -5px; top: 50%; transform: translateY(-50%); }
 }
+
+.dragon-circle-roadmap{
+  padding: 80px 20px 120px; /* lebih ramping di atas & bawah */
+}
+
+.center-content p{
+  line-height: 1.4rem;
+  font-size: 13px;
+}
+
+
 
 
 
@@ -639,13 +815,25 @@ footer {
   color: var(--muted);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE BUTTON MOBILE ===== */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+
+  .btn {
+    width: 100%;          /* tombol full width */
+    justify-content: center; /* icon + teks tetap di tengah */
+    padding: 14px 0;      /* lebih mudah di klik */
+    font-size: 1rem;      /* sedikit lebih besar untuk readability */
+    gap: 8px;             /* jarak icon dan teks lebih rapat */
   }
 
-  .about {
-    grid-template-columns: 1fr;
+  .icon-btn img {
+    width: 18px;           /* icon lebih proporsional di tombol full width */
+    height: 18px;
+  }
+
+  .socials {
+    flex-direction: column;  /* tombol sosial vertikal */
+    gap: 15px;
+    align-items: center;
   }
 }

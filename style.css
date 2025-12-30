@@ -400,10 +400,14 @@ a {
 .dragon-circle-roadmap{
   padding: 120px 0;
   background: #0b0b0f;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
-
+.dragon-circle-roadmap h2{
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffb700;
+}
 .subtitle{
   opacity: 0.7;
   margin-bottom: 50px;
@@ -460,8 +464,8 @@ a {
 /* MOBILE */
 @media(max-width:600px){
   .circle-container{
-    width: 300px;
-    height: 300px;
+    width: 410px;
+    height: 410px;
   }
 
   .center-content{
@@ -472,18 +476,52 @@ a {
 
 
 /* ===== HOW TO BUY ===== */
-.steps {
+.steps{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  text-align: center;
 }
 
-.step {
+.step{
   background: var(--card);
-  padding: 25px;
-  border-radius: 15px;
+  border-radius: 18px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
 }
+
+/* IMAGE FULL */
+.step img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ganti cover kalau mau penuh banget */
+  transition: transform 0.4s ease;
+  padding: 25px;
+}
+
+/* HOVER EFFECT */
+.step:hover{
+  background: linear-gradient(50deg,#ff0000,#ff6a00);
+  transform: translateY(-6px);
+}
+
+.step:hover img{
+  transform: scale(1.08);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .step{
+    height: 140px;
+  }
+}
+
+
 
 /* ===== COMMUNITY ===== */
 .community {
@@ -497,6 +535,32 @@ a {
   gap: 25px;
   font-weight: 600;
 }
+
+.btn{
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(50deg,#ff0000,#ff6a00);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(203, 1, 1, 0.6);
+}
+
+/* ICON DALAM BUTTON */
+.icon-btn img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 
 /* ===== FOOTER ===== */
 footer {

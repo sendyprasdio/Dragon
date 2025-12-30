@@ -1,4 +1,8 @@
 /* ===== NAVBAR ===== */
+html, body {
+  overflow-x: hidden; /* cegah scroll horizontal */
+}
+
 .navbar {
   width: 100%;
   position: fixed; /* ganti sticky jadi fixed agar selalu muncul */
@@ -39,9 +43,10 @@
 
 /* NAV LINKS */
 .nav-links {
-  display: flex;
-  gap: 25px;
+  max-width: 80%; /* atau 100% viewport */
+  right: 0;
 }
+
 
 .nav-links a {
   text-decoration: none;
@@ -835,5 +840,35 @@ footer {
     flex-direction: column;  /* tombol sosial vertikal */
     gap: 15px;
     align-items: center;
+  }
+}
+
+.hero-inner, .about, .token-overview, .steps {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* pastikan padding masuk hitungan width */
+  padding: 0 20px;        /* jangan terlalu besar di HP */
+}
+
+.hero-image img, .about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 0 20px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .token-overview {
+    padding: 40px 20px;
+  }
+
+  .steps {
+    padding: 0 10px;
   }
 }
